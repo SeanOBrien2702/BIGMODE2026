@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 public class GameUIController : MonoBehaviour
 {
     [Header("UI Elements")]
+    [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject gameOverPanel;
 
     [Header("Score Panel")]
     [SerializeField] TextMeshProUGUI shotsCountText;
     [SerializeField] TextMeshProUGUI parText;
 
+    bool isGameOver = false;
+
     void Start()
     {
+        pausePanel.SetActive(false);
         gameOverPanel.SetActive(false);
         TargetController.OnGameOver += TargetController_OnGameOver;
     }
@@ -22,8 +26,32 @@ public class GameUIController : MonoBehaviour
         TargetController.OnGameOver -= TargetController_OnGameOver;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
+    }
+
+    void TogglePause()
+    {
+        if (isGameOver) return;
+        pausePanel.SetActive(!pausePanel.activeSelf);
+        if (pausePanel.activeSelf)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
     private void TargetController_OnGameOver()
     {
+        isGameOver = true;
+        pausePanel.SetActive(false);
         gameOverPanel.SetActive(true);
     }
 
@@ -51,5 +79,10 @@ public class GameUIController : MonoBehaviour
     public void RestartGameButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void PauseButton()
+    {
+        TogglePause();
     }
 }

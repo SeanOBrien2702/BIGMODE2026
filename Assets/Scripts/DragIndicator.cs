@@ -18,6 +18,7 @@ public class DragIndicator : MonoBehaviour
         {
             ToggleAimVisuals(false);
         }
+        if (Time.timeScale == 0) return;
         if (Input.GetMouseButtonDown(0))
         {
             transform.position = PositionHelper.GetMousePosition();
