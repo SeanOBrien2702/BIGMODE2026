@@ -7,7 +7,7 @@ public class LaunchController : MonoBehaviour
     Rigidbody2D rb;
     Vector3 startPos;
     Vector3 endPos;
-    public Vector3 dragVector;
+    Vector3 dragVector;
 
     LineRenderer lineRenderer;
     Vector3 lineRendererStart;
@@ -17,8 +17,11 @@ public class LaunchController : MonoBehaviour
     [SerializeField] Transform arrow;
     bool hasCancelled = false;
 
+    TrailController trailController;
+
     private void Start()
     {
+        trailController = GetComponent<TrailController>();
         rb = GetComponent<Rigidbody2D>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
         ToggleAimVisuals(false);
@@ -48,7 +51,9 @@ public class LaunchController : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && !hasCancelled)
         {
             ToggleAimVisuals(false);
-            rb.AddForce(Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier, ForceMode2D.Impulse);
+            Vector3 lauchForce = Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
+            rb.AddForce(lauchForce, ForceMode2D.Impulse);
+            trailController.SetSpeed(lauchForce.magnitude);
             OnLaunched?.Invoke();
         }
     }
@@ -67,5 +72,6 @@ public class LaunchController : MonoBehaviour
         lineRendererStart = dragVector.normalized * lineStartOffset;
         lineRenderer.SetPosition(0, lineRendererStart);
         lineRenderer.SetPosition(1, lineRendererStart + lineRendererStart * Mathf.Min(maxLineLength,  dragVector.magnitude));
+        lineRenderer.colorGradient = SpeedDatabase.instance.GetGradientForSpeed((Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier).magnitude, false);
     }
 }
