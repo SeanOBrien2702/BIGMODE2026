@@ -15,7 +15,8 @@ public class LaunchController : MonoBehaviour
     [SerializeField] float powerMultiplier = 1;
     [SerializeField] float maxLineLength = 5;
     [SerializeField] Transform arrow;
-   
+    bool hasCancelled = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,8 +26,16 @@ public class LaunchController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            startPos = Vector3.zero;
+            endPos = Vector3.zero;
+            ToggleAimVisuals(false);
+            hasCancelled = true;
+        }
         if (Input.GetMouseButtonDown(0))
         {
+            hasCancelled = false;
             startPos = PositionHelper.GetMousePosition();
             ToggleAimVisuals(true);
         }
@@ -36,7 +45,7 @@ public class LaunchController : MonoBehaviour
             dragVector = startPos - endPos;
             DrawLine();
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && !hasCancelled)
         {
             ToggleAimVisuals(false);
             rb.AddForce(Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier, ForceMode2D.Impulse);
