@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 554d20c817ba8d3468e445747be33c46
+guid: 39ba32c5104b9c04290fdad0583f9492
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3200119632217465072
-    second: TestSeal_0
+      213: 6630341104690361922
+    second: Adobe Express - file_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TestSeal_0
+      name: Adobe Express - file_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 134
-        height: 118
+        x: 9
+        y: 9
+        width: 119
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f0631db9db196c20800000000000000
-      internalID: 3200119632217465072
+      spriteID: 2467dbc0b14b30c50800000000000000
+      internalID: 6630341104690361922
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TestSeal_0: 3200119632217465072
+      Adobe Express - file_0: 6630341104690361922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
