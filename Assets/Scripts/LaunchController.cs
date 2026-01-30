@@ -1,8 +1,9 @@
-using Unity.Mathematics;
+using System;
 using UnityEngine;
 
 public class LaunchController : MonoBehaviour
 {
+    public static event Action OnLaunched = delegate { };
     Rigidbody2D rb;
     Vector3 startPos;
     Vector3 endPos;
@@ -39,6 +40,7 @@ public class LaunchController : MonoBehaviour
         {
             ToggleAimVisuals(false);
             rb.AddForce(Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier, ForceMode2D.Impulse);
+            OnLaunched?.Invoke();
         }
     }
 
