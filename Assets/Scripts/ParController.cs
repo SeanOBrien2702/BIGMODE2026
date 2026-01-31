@@ -13,11 +13,21 @@ public class ParController : MonoBehaviour
         int currentPar = GetCurrentPar();
         gameUIController.UpdateParDisplay(currentShot, currentPar, starAmountPar[currentPar]);
         LaunchController.OnLaunched += LaunchController_OnLaunched;
+        TargetController.OnGameOver += TargetController_OnGameOver;
     }
 
     private void OnDestroy()
     {
         LaunchController.OnLaunched -= LaunchController_OnLaunched;
+        TargetController.OnGameOver -= TargetController_OnGameOver;
+    }
+
+    private void TargetController_OnGameOver()
+    {
+        Debug.Log("Level completed in " + currentShot + " shots.");
+        int stars = GetStars();
+        gameUIController.ShowStars(stars);
+        LevelController.Instance.SaveLevelProgress(stars);
     }
 
     private void LaunchController_OnLaunched()
@@ -42,5 +52,18 @@ public class ParController : MonoBehaviour
             }
         }
         return starAmountPar.Length;
+    }
+
+    private int GetStars()
+    {
+        int stars = starAmountPar.Length;
+        for (int i = 0; i < starAmountPar.Length; i++)
+        {
+            if (currentShot > starAmountPar[i])
+            {
+                stars--;
+            }
+        }
+        return stars;
     }
 }

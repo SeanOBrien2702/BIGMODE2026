@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuUIController : MonoBehaviour
 {
@@ -12,21 +10,11 @@ public class MainMenuUIController : MonoBehaviour
     [SerializeField] GameObject tutorialPanel;
     [SerializeField] GameObject creditsPanel;
 
-    [Header("Score Panel")]
-    [SerializeField] TextMeshProUGUI shotsCountText;
-    [SerializeField] TextMeshProUGUI parText;
-
-    bool isGameOver = false;
-
     void Start()
     {
-        Debug.Log("MainMenuUIController Start");
         SelectPanel(menuPanel);
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            //int stars = LevelController.instance.GetLevelStars(i + 1);
-            //levelButtons[i].SetStars(stars);
-            //bool isUnlocked = LevelController.instance.IsLevelUnlocked(i + 1);
             levelButtons[i].Initialize(i);
         }
     }

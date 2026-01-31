@@ -3,11 +3,13 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
     public static LevelController Instance;
+    [SerializeField] int totalLevels = 10;
     int currentLevel = 0;
+
+    public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
 
     void Awake()
     {
-        Debug.Log("LevelController Awake");
         if (Instance == null)
         {
             Instance = this;
@@ -18,31 +20,37 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    
-    // Call this when a player finishes a level
-    public void SaveLevelProgress(int levelIndex, int stars)
+    public void SaveLevelProgress(int stars)
     {
-        // Save stars if the new score is higher than the old one
-        int currentStars = PlayerPrefs.GetInt("Level_" + levelIndex + "_Stars", 0);
+        int currentStars = PlayerPrefs.GetInt("Level" + currentLevel + "Stars", 0);
         if (stars > currentStars)
         {
-            PlayerPrefs.SetInt("Level_" + levelIndex + "_Stars", stars);
+            PlayerPrefs.SetInt("Level" + currentLevel + "Stars", stars);
         }
-
-        // Unlock the next level
-        PlayerPrefs.SetInt("Level_" + (levelIndex + 1) + "_Unlocked", 1);
+        Debug.Log("Level " + currentLevel + " completed with " + stars + " stars.");
+        PlayerPrefs.SetInt("Level" + (currentLevel + 1) + "Unlocked", 1);
         PlayerPrefs.Save();
     }
 
     public int GetLevelStars(int levelIndex)
     {
-        return PlayerPrefs.GetInt("Level_" + levelIndex + "_Stars", 0);
+        return PlayerPrefs.GetInt("Level" + levelIndex + "Stars", 0);
     }
 
     public bool IsLevelUnlocked(int levelIndex)
     {
-        // Level 1 is always unlocked by default
         if (levelIndex == 0) return true;
-        return PlayerPrefs.GetInt("Level_" + levelIndex + "_Unlocked", 0) == 1;
+        Debug.Log("Level " + levelIndex + " unlocked: " + (PlayerPrefs.GetInt("Level" + levelIndex + "Unlocked", 0) == 1));
+        return PlayerPrefs.GetInt("Level" + levelIndex + "Unlocked", 0) == 1;
+    }
+
+    public string NextLevel()
+    {
+        currentLevel++;
+        if (currentLevel >= totalLevels)
+        {
+            return "MainMenu";
+        }
+        return "Level" + (currentLevel + 1).ToString();
     }
 }

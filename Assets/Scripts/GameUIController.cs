@@ -7,6 +7,7 @@ public class GameUIController : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] GameObject[] stars;
 
     [Header("Score Panel")]
     [SerializeField] TextMeshProUGUI shotsCountText;
@@ -76,9 +77,27 @@ public class GameUIController : MonoBehaviour
         }
     }
 
+    public void ShowStars(int starCount)
+    {
+        for (int i = 0; i < stars.Length; i++)
+        {
+            stars[i].SetActive(i < starCount);
+        }
+    }
+
+    public void NextLevel()
+    {
+        SceneController.Instance.LoadScene(LevelController.Instance.NextLevel());
+    }
+
     public void RestartGameButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneController.Instance.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void MainMenuButton()
+    {
+        SceneController.Instance.LoadScene("MainMenu");
     }
 
     public void PauseButton()

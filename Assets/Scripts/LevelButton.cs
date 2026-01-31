@@ -1,6 +1,6 @@
-using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour
@@ -19,31 +19,15 @@ public class LevelButton : MonoBehaviour
             int starCount = LevelController.Instance.GetLevelStars(level);
             for (int i = 0; i < stars.Length; i++)
             {
-                // Activate the star image if the index is less than stars earned
                 stars[i].SetActive(i < starCount);
             }
-        }
-        else
-        {
-            // Hide stars if level is locked
-            foreach (var star in stars)
-            {
-                star.SetActive(false);
-            }
+            button.onClick.AddListener(() => LoadLevel(level));
         }
     }
 
-    void Start()
+    void LoadLevel(int level)
     {
-        foreach (var item in stars)
-        {
-            item.SetActive(false);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LevelController.Instance.CurrentLevel = level;
+        SceneManager.LoadScene("Level" + (level + 1).ToString());
     }
 }

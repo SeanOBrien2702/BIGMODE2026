@@ -2077,8 +2077,6 @@ MonoBehaviour:
   levelSelectPanel: {fileID: 1486031112}
   tutorialPanel: {fileID: 724433746}
   creditsPanel: {fileID: 1955014200}
-  shotsCountText: {fileID: 0}
-  parText: {fileID: 0}
 --- !u!114 &879479071
 MonoBehaviour:
   m_ObjectHideFlags: 0
