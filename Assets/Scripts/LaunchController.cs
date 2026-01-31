@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class LaunchController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LaunchController : MonoBehaviour
     Vector3 startPos;
     Vector3 endPos;
     Vector3 dragVector;
+    [SerializeField] float stopVelocityThreshold = 0.25f;
 
     LineRenderer lineRenderer;
     Vector3 lineRendererStart;
@@ -16,6 +18,8 @@ public class LaunchController : MonoBehaviour
     [SerializeField] float maxLineLength = 5;
     [SerializeField] Transform arrow;
     bool hasCancelled = false;
+    bool isGameOver = false;
+    bool isMoving = false;
 
     TrailController trailController;
 
@@ -25,38 +29,74 @@ public class LaunchController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
         ToggleAimVisuals(false);
+        TargetController.OnGameOver += TargetController_OnGameOver;
+    }
+
+    private void OnDestroy()
+    {
+        TargetController.OnGameOver -= TargetController_OnGameOver;
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
-            startPos = Vector3.zero;
-            endPos = Vector3.zero;
-            ToggleAimVisuals(false);
-            hasCancelled = true;
+            CancelShot();
         }
-        if (Time.timeScale == 0) return;
+        if (isMoving && rb.linearVelocity.magnitude < stopVelocityThreshold)
+        {
+            Stop();
+        }
+        if (!CanShoot()) return;
         if (Input.GetMouseButtonDown(0))
         {
-            hasCancelled = false;
-            startPos = PositionHelper.GetMousePosition();
-            ToggleAimVisuals(true);
+            StartlaunchDrag();
         }
-        if (Input.GetMouseButton(0))
-        {
+        if (Input.GetMouseButton(0) )
+        {         
             endPos = PositionHelper.GetMousePosition();
             dragVector = startPos - endPos;
+            
             DrawLine();
         }
         if (Input.GetMouseButtonUp(0) && !hasCancelled)
         {
-            ToggleAimVisuals(false);
-            Vector3 lauchForce = Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
-            rb.AddForce(lauchForce, ForceMode2D.Impulse);
-            trailController.SetSpeed(lauchForce.magnitude);
-            OnLaunched?.Invoke();
+            Launch();
         }
+    }
+
+    void StartlaunchDrag()
+    {
+        hasCancelled = false;
+        startPos = PositionHelper.GetMousePosition();
+        ToggleAimVisuals(true);
+    }
+
+    void CancelShot()
+    {
+        startPos = Vector3.zero;
+        endPos = Vector3.zero;
+        ToggleAimVisuals(false);
+        hasCancelled = true;
+    }
+
+    void Stop()
+    {
+        isMoving = false;
+        rb.linearVelocity = Vector3.zero;
+        if (Input.GetMouseButton(0))
+        {
+            StartlaunchDrag();
+        }
+    }
+
+    public bool CanShoot()
+    {       
+        return Time.timeScale == 1 &&
+               rb.linearVelocity.magnitude == 0 &&
+               !isGameOver &&
+               !isMoving &&
+               !EventSystem.current.IsPointerOverGameObject(); 
     }
 
     void ToggleAimVisuals(bool toggle)
@@ -74,5 +114,20 @@ public class LaunchController : MonoBehaviour
         lineRenderer.SetPosition(0, lineRendererStart);
         lineRenderer.SetPosition(1, lineRendererStart + lineRendererStart * Mathf.Min(maxLineLength,  dragVector.magnitude));
         lineRenderer.colorGradient = SpeedDatabase.instance.GetGradientForSpeed((Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier).magnitude, false);
+    }
+
+    void Launch()
+    {
+        ToggleAimVisuals(false);
+        Vector3 lauchForce = Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
+        rb.AddForce(lauchForce, ForceMode2D.Impulse);
+        trailController.SetSpeed(lauchForce.magnitude);
+        isMoving = true;
+        OnLaunched?.Invoke();
+    }
+
+    private void TargetController_OnGameOver()
+    {
+        isGameOver = true;
     }
 }

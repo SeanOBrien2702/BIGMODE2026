@@ -306,6 +306,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &152612549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1351929554310898251, guid: db0a64da2d6cc3743bf9ca427b907ff3, type: 3}
+  m_PrefabInstance: {fileID: 1335424959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37880b76811cfd24b9d009f2ff386cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &595447469
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +938,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3293387978304996354, guid: 7a74cd02ff7f2ff41af541f1580933bb, type: 3}
+      propertyPath: launchController
+      value: 
+      objectReference: {fileID: 152612549}
     - target: {fileID: 4765106526499177547, guid: 7a74cd02ff7f2ff41af541f1580933bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.32951
@@ -945,15 +960,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765106526499177547, guid: 7a74cd02ff7f2ff41af541f1580933bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4765106526499177547, guid: 7a74cd02ff7f2ff41af541f1580933bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4765106526499177547, guid: 7a74cd02ff7f2ff41af541f1580933bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4765106526499177547, guid: 7a74cd02ff7f2ff41af541f1580933bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -984,8 +999,8 @@ SceneRoots:
   - {fileID: 39486001}
   - {fileID: 2055222574}
   - {fileID: 1335424959}
-  - {fileID: 2143766840}
   - {fileID: 595447473}
+  - {fileID: 2143766840}
   - {fileID: 1103524407}
   - {fileID: 1530801902}
   - {fileID: 1602477124}

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DragIndicator : MonoBehaviour
 {
+    [SerializeField] LaunchController launchController;
     LineRenderer lineRenderer;
     SpriteRenderer indicator;
     Vector3 endPos;
@@ -18,7 +19,7 @@ public class DragIndicator : MonoBehaviour
         {
             ToggleAimVisuals(false);
         }
-        if (Time.timeScale == 0) return;
+        if (!launchController.CanShoot()) return;
         if (Input.GetMouseButtonDown(0))
         {
             transform.position = PositionHelper.GetMousePosition();
