@@ -8,6 +8,7 @@ public class MainMenuUIController : MonoBehaviour
     [SerializeField] GameObject menuPanel;
     [SerializeField] GameObject levelSelectPanel;
     [SerializeField] GameObject tutorialPanel;
+    [SerializeField] GameObject settingsPanel;
     [SerializeField] GameObject creditsPanel;
 
     void Start()
@@ -24,9 +25,15 @@ public class MainMenuUIController : MonoBehaviour
         menuPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
         tutorialPanel.SetActive(false);
+        settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
 
         panel.SetActive(true);
+    }
+
+    public void ResetButton()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     public void MenuButton()
@@ -42,6 +49,11 @@ public class MainMenuUIController : MonoBehaviour
     public void TutorialButton()
     {
         SelectPanel(tutorialPanel);
+    }
+
+    public void SettingsButton()
+    {
+        SelectPanel(settingsPanel);
     }
 
     public void CreditsButton()
