@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b82d202642afac4fac3a52dcb1a8c0c, type: 3}
   m_Name: FastSpeedData
   m_EditorClassIdentifier: Assembly-CSharp::SpeedData
+  SpeedDamage: 3
   SpeedThreshold: 10
   TrailGradient:
     serializedVersion: 2

@@ -34,7 +34,7 @@ public class Target : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            DealDamage(collision.gameObject.GetComponent<LaunchController>().GetSpeedLevel() + 1);
+            DealDamage(collision.gameObject.GetComponent<LaunchController>().GetSpeedDamage());
         }
         else if(collision.gameObject.CompareTag("Target"))
         {

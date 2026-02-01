@@ -27,6 +27,12 @@ public class SpeedDatabase : MonoBehaviour
         return speedData[speedLevel].TrailGradient;
     }
 
+    public int GetDamageForSpeed(float speed)
+    {
+        int speedLevel = GetSpeedLevel(speed);
+        return speedData[speedLevel].SpeedDamage;
+    }
+
     public int GetSpeedLevel(float speed)
     {
         for (int i = speedData.Length - 1; i > 0; i--)

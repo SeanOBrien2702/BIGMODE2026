@@ -156,8 +156,13 @@ public class LaunchController : MonoBehaviour
         return Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
     }
 
-    internal int GetSpeedLevel()
+    public int GetSpeedLevel()
     {
         return SpeedDatabase.instance.GetSpeedLevel(preCollisionVelocity.magnitude); 
+    }
+
+    public int GetSpeedDamage()
+    {
+        return SpeedDatabase.instance.GetDamageForSpeed(preCollisionVelocity.magnitude);
     }
 }
