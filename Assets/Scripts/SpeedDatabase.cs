@@ -19,21 +19,23 @@ public class SpeedDatabase : MonoBehaviour
 
     public Gradient GetGradientForSpeed(float speed, bool isTrail)
     {
+        int speedLevel = GetSpeedLevel(speed);
+        if (!isTrail)
+        {
+            return speedData[speedLevel].AimGradient;
+        }
+        return speedData[speedLevel].TrailGradient;
+    }
+
+    public int GetSpeedLevel(float speed)
+    {
         for (int i = speedData.Length - 1; i > 0; i--)
         {
             if (speed >= speedData[i].SpeedThreshold)
             {
-                if(!isTrail)
-                {
-                    return speedData[i].AimGradient;
-                }
-                return speedData[i].TrailGradient;
+                return i;
             }
         }
-        if(!isTrail)
-        {
-            return speedData[0].AimGradient;
-        }
-        return speedData[0].TrailGradient;
+        return 0;
     }
 }

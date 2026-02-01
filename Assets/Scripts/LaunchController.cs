@@ -9,6 +9,7 @@ public class LaunchController : MonoBehaviour
     Vector3 startPos;
     Vector3 endPos;
     Vector3 dragVector;
+    Vector3 preCollisionVelocity;
     [SerializeField] float stopVelocityThreshold = 0.25f;
 
     LineRenderer lineRenderer;
@@ -49,10 +50,6 @@ public class LaunchController : MonoBehaviour
         {
             CancelShot();
         }
-        if (isMoving && rb.linearVelocity.magnitude < stopVelocityThreshold)
-        {
-            Stop();
-        }
         if (!CanShoot()) return;
         if (Input.GetMouseButtonDown(0))
         {
@@ -68,6 +65,22 @@ public class LaunchController : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && !hasCancelled)
         {
             Launch();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        preCollisionVelocity = rb.linearVelocity;
+        if (isMoving)
+        {
+            if (rb.linearVelocity.magnitude < stopVelocityThreshold)
+            {
+                Stop();
+            }
+            else
+            {
+                trailController.SetSpeed(rb.linearVelocity.magnitude);
+            }
         }
     }
 
@@ -128,7 +141,6 @@ public class LaunchController : MonoBehaviour
         ToggleAimVisuals(false);
         Vector3 lauchForce = GetLaunchForce();
         rb.AddForce(lauchForce, ForceMode2D.Impulse);
-        trailController.SetSpeed(lauchForce.magnitude);
         isMoving = true;
         dragVector = Vector3.zero;
         OnLaunched?.Invoke();
@@ -142,5 +154,10 @@ public class LaunchController : MonoBehaviour
     public Vector3 GetLaunchForce()
     {
         return Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
+    }
+
+    internal int GetSpeedLevel()
+    {
+        return SpeedDatabase.instance.GetSpeedLevel(preCollisionVelocity.magnitude); 
     }
 }

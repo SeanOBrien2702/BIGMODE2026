@@ -5367,7 +5367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   stopVelocityThreshold: 0.75
-  powerMultiplier: 2.5
+  powerMultiplier: 3.5
   maxLineLength: 5
   arrow: {fileID: 5476332242022148500}
 --- !u!114 &547561962156212613
