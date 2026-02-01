@@ -22,9 +22,15 @@ public class LaunchController : MonoBehaviour
     bool isMoving = false;
 
     TrailController trailController;
+    AudioSource audio;
+
+    public Vector3 DragVector { get => dragVector; }
+    public bool IsMoving { get => isMoving; }
+    public Rigidbody2D Rb { get => rb; }
 
     private void Start()
     {
+        audio = GetComponent<AudioSource>();
         trailController = GetComponent<TrailController>();
         rb = GetComponent<Rigidbody2D>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
@@ -67,6 +73,7 @@ public class LaunchController : MonoBehaviour
 
     void StartlaunchDrag()
     {
+        audio.Play();
         hasCancelled = false;
         startPos = PositionHelper.GetMousePosition();
         ToggleAimVisuals(true);
@@ -82,8 +89,8 @@ public class LaunchController : MonoBehaviour
 
     void Stop()
     {
-        isMoving = false;
         rb.linearVelocity = Vector3.zero;
+        isMoving = false;       
         if (Input.GetMouseButton(0))
         {
             StartlaunchDrag();
@@ -113,21 +120,27 @@ public class LaunchController : MonoBehaviour
         lineRendererStart = dragVector.normalized * lineStartOffset;
         lineRenderer.SetPosition(0, lineRendererStart);
         lineRenderer.SetPosition(1, lineRendererStart + lineRendererStart * Mathf.Min(maxLineLength,  dragVector.magnitude));
-        lineRenderer.colorGradient = SpeedDatabase.instance.GetGradientForSpeed((Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier).magnitude, false);
+        lineRenderer.colorGradient = SpeedDatabase.instance.GetGradientForSpeed(GetLaunchForce().magnitude, false);
     }
 
     void Launch()
-    {
+    {       
         ToggleAimVisuals(false);
-        Vector3 lauchForce = Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
+        Vector3 lauchForce = GetLaunchForce();
         rb.AddForce(lauchForce, ForceMode2D.Impulse);
         trailController.SetSpeed(lauchForce.magnitude);
         isMoving = true;
+        dragVector = Vector3.zero;
         OnLaunched?.Invoke();
     }
 
     private void TargetController_OnGameOver()
     {
         isGameOver = true;
+    }
+
+    public Vector3 GetLaunchForce()
+    {
+        return Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
     }
 }
