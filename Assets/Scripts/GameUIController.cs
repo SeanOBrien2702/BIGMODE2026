@@ -38,8 +38,7 @@ public class GameUIController : MonoBehaviour
     void TogglePause()
     {
         if (isGameOver) return;
-        pausePanel.SetActive(!pausePanel.activeSelf);
-        if (pausePanel.activeSelf)
+        if (SettingsUIController.Instance.ToggleSettings())
         {
             Time.timeScale = 0f;
         }
