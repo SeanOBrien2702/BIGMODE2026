@@ -23,7 +23,8 @@ public class LaunchController : MonoBehaviour
     bool isMoving = false;
 
     TrailController trailController;
-    AudioSource audio;
+    [SerializeField] SFXObject aimingSound;
+    [SerializeField] SFXObject launchingSound;
 
     public Vector3 DragVector { get => dragVector; }
     public bool IsMoving { get => isMoving; }
@@ -31,7 +32,6 @@ public class LaunchController : MonoBehaviour
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
         trailController = GetComponent<TrailController>();
         rb = GetComponent<Rigidbody2D>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
@@ -86,7 +86,7 @@ public class LaunchController : MonoBehaviour
 
     void StartlaunchDrag()
     {
-        audio.Play();
+        SFXManager.Main.Play(aimingSound);
         hasCancelled = false;
         startPos = PositionHelper.GetMousePosition();
         ToggleAimVisuals(true);
@@ -138,6 +138,7 @@ public class LaunchController : MonoBehaviour
 
     void Launch()
     {       
+        SFXManager.Main.Play(launchingSound);
         ToggleAimVisuals(false);
         Vector3 lauchForce = GetLaunchForce();
         rb.AddForce(lauchForce, ForceMode2D.Impulse);

@@ -1268,18 +1268,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2542289531620878084, guid: db0a64da2d6cc3743bf9ca427b907ff3, type: 3}
-      propertyPath: m_Mass
-      value: 0.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542289531620878084, guid: db0a64da2d6cc3743bf9ca427b907ff3, type: 3}
-      propertyPath: m_LinearDamping
-      value: 0.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542289531620878084, guid: db0a64da2d6cc3743bf9ca427b907ff3, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7524420803774273573, guid: db0a64da2d6cc3743bf9ca427b907ff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.39

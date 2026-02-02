@@ -28,6 +28,6 @@ public class LevelButton : MonoBehaviour
     void LoadLevel(int level)
     {
         LevelController.Instance.CurrentLevel = level;
-        SceneManager.LoadScene("Level" + (level + 1).ToString());
+        SceneController.Instance.LoadScene("Level" + (level + 1).ToString());
     }
 }
