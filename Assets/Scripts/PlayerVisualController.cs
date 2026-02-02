@@ -5,16 +5,22 @@ using UnityEngine;
 public class PlayerVisualController : MonoBehaviour
 {
     [SerializeField] SpriteRenderer sprite;
+    [SerializeField] Sprite[] animationSprites;
     [SerializeField, Range(0.01f, 0.06f)] float scaleFactor = 0.03f; 
     [SerializeField, Range(0.1f, 1f)] float resizeDuration = 0.5f;
     float magnitude;
     LaunchController launchController;
     Vector2 lastDirection;
+    float maxForce;
+    float currentForce;
+    Animator animator; 
 
     void Start()
     {
         launchController = GetComponent<LaunchController>();
         LaunchController.OnLaunched += LaunchController_OnLaunched;
+        maxForce = launchController.GetMaxForce();
+        animator = GetComponent<Animator>();
     }
 
     private void OnDestroy()
@@ -37,6 +43,8 @@ public class PlayerVisualController : MonoBehaviour
             sprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 180));
             Vector3 scale = new Vector3(1 + magnitude * scaleFactor, 1 - magnitude * scaleFactor, 1);
             sprite.transform.localScale = scale;
+            currentForce = magnitude/maxForce;
+            animator.SetFloat("Power", currentForce);
         }   
     }
 
@@ -49,12 +57,16 @@ public class PlayerVisualController : MonoBehaviour
     {
         float time = 0;
         Vector3 startScale = sprite.transform.localScale;
+        float force = 0;
         while (time < duration)
         {
             sprite.transform.localScale = Vector3.Lerp(startScale, Vector3.one, time / duration);
+            force = Mathf.Lerp(currentForce, 0, time / duration);
+            animator.SetFloat("Power", force);
             time += Time.deltaTime;
             yield return null;
         }
+        animator.SetFloat("Power", 0);
         sprite.transform.localScale = Vector3.one;;
     }
 }
