@@ -16,7 +16,7 @@ MonoBehaviour:
   SFXName: SceneClose
   SFXLayers:
   - LayerName: SceneClose
-    SFX: {fileID: 8300000, guid: 51787772ebe4f154dac428a6c5b5c804, type: 3}
+    SFX: {fileID: 8300000, guid: d2014a641734b394bad0cf624d5c4dd1, type: 3}
     RandomizeVolume: 0
     FixedVolume: 1
     MinVolume: 0.5

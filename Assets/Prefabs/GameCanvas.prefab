@@ -126,6 +126,8 @@ MonoBehaviour:
   - {fileID: 406050193638893862}
   shotsCountText: {fileID: 8605756357927441170}
   parText: {fileID: 5820130483524691272}
+  wonSFX: {fileID: 11400000, guid: de532967f3d96be4085f0a2f1ea9d603, type: 2}
+  lostSFX: {fileID: 11400000, guid: 5f26b4372e7daff49b6f5a71bbcbb0d8, type: 2}
 --- !u!1 &406050193638893862
 GameObject:
   m_ObjectHideFlags: 0

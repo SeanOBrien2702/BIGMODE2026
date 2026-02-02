@@ -13,6 +13,10 @@ public class GameUIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI shotsCountText;
     [SerializeField] TextMeshProUGUI parText;
 
+    [Header("Audio")]
+    [SerializeField] SFXObject wonSFX;
+    [SerializeField] SFXObject lostSFX;
+
     bool isGameOver = false;
 
     void Start()
@@ -81,6 +85,14 @@ public class GameUIController : MonoBehaviour
         for (int i = 0; i < stars.Length; i++)
         {
             stars[i].SetActive(i < starCount);
+        }
+        if (starCount > 0)
+        {
+            SFXManager.Main.Play(wonSFX);
+        }
+        else
+        {
+            SFXManager.Main.Play(lostSFX);
         }
     }
 
