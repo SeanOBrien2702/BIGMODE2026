@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ public class GameUIController : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] float starDelay;
     [SerializeField] GameObject[] stars;
 
     [Header("Score Panel")]
@@ -82,10 +84,6 @@ public class GameUIController : MonoBehaviour
 
     public void ShowStars(int starCount)
     {
-        for (int i = 0; i < stars.Length; i++)
-        {
-            stars[i].SetActive(i < starCount);
-        }
         if (starCount > 0)
         {
             SFXManager.Main.Play(wonSFX);
@@ -93,6 +91,16 @@ public class GameUIController : MonoBehaviour
         else
         {
             SFXManager.Main.Play(lostSFX);
+        }
+        StartCoroutine(AnimateStars(starCount));
+    }
+
+    IEnumerator AnimateStars(int starCount)
+    {
+        for (int i = 0; i < starCount; i++)
+        {
+            stars[i].SetActive(true);
+            yield return new WaitForSeconds(starDelay);
         }
     }
 
