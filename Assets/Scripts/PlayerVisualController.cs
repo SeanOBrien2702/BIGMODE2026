@@ -19,6 +19,7 @@ public class PlayerVisualController : MonoBehaviour
     {
         launchController = GetComponent<LaunchController>();
         LaunchController.OnLaunched += LaunchController_OnLaunched;
+        LaunchController.OnCancel += LaunchController_OnCancel;
         maxForce = launchController.GetMaxForce();
         animator = GetComponent<Animator>();
     }
@@ -26,6 +27,7 @@ public class PlayerVisualController : MonoBehaviour
     private void OnDestroy()
     {
         LaunchController.OnLaunched -= LaunchController_OnLaunched;
+        LaunchController.OnCancel -= LaunchController_OnCancel;
     }
 
     void Update()
@@ -48,10 +50,17 @@ public class PlayerVisualController : MonoBehaviour
         }   
     }
 
+    void LaunchController_OnCancel()
+    {
+        StartCoroutine(ResetScale(resizeDuration));
+    }
+
     void LaunchController_OnLaunched()
     {
         StartCoroutine(ResetScale(resizeDuration));
     }
+
+
 
     IEnumerator ResetScale(float duration)
     {

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class LaunchController : MonoBehaviour
 {
     public static event Action OnLaunched = delegate { };
+    public static event Action OnCancel = delegate { };
     Rigidbody2D rb;
     Vector3 startPos;
     Vector3 endPos;
@@ -55,6 +56,7 @@ public class LaunchController : MonoBehaviour
         {
             StartlaunchDrag();
         }
+        if(hasCancelled) return;
         if (Input.GetMouseButton(0) )
         {         
             endPos = PositionHelper.GetMousePosition();
@@ -62,7 +64,7 @@ public class LaunchController : MonoBehaviour
             
             DrawLine();
         }
-        if (Input.GetMouseButtonUp(0) && !hasCancelled)
+        if (Input.GetMouseButtonUp(0))
         {
             Launch();
         }
@@ -96,7 +98,9 @@ public class LaunchController : MonoBehaviour
     {
         startPos = Vector3.zero;
         endPos = Vector3.zero;
+        dragVector = Vector3.zero;
         ToggleAimVisuals(false);
+        OnCancel?.Invoke();
         hasCancelled = true;
     }
 
