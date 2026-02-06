@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,11 +8,16 @@ public class GameUIController : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] float starDelay;
     [SerializeField] GameObject[] stars;
 
     [Header("Score Panel")]
     [SerializeField] TextMeshProUGUI shotsCountText;
     [SerializeField] TextMeshProUGUI parText;
+
+    [Header("Audio")]
+    [SerializeField] SFXObject wonSFX;
+    [SerializeField] SFXObject lostSFX;
 
     bool isGameOver = false;
 
@@ -38,8 +44,7 @@ public class GameUIController : MonoBehaviour
     void TogglePause()
     {
         if (isGameOver) return;
-        pausePanel.SetActive(!pausePanel.activeSelf);
-        if (pausePanel.activeSelf)
+        if (SettingsUIController.Instance.ToggleSettings())
         {
             Time.timeScale = 0f;
         }
@@ -79,9 +84,23 @@ public class GameUIController : MonoBehaviour
 
     public void ShowStars(int starCount)
     {
-        for (int i = 0; i < stars.Length; i++)
+        if (starCount > 0)
         {
-            stars[i].SetActive(i < starCount);
+            SFXManager.Main.Play(wonSFX);
+        }
+        else
+        {
+            SFXManager.Main.Play(lostSFX);
+        }
+        StartCoroutine(AnimateStars(starCount));
+    }
+
+    IEnumerator AnimateStars(int starCount)
+    {
+        for (int i = 0; i < starCount; i++)
+        {
+            stars[i].SetActive(true);
+            yield return new WaitForSeconds(starDelay);
         }
     }
 

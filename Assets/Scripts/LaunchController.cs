@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class LaunchController : MonoBehaviour
 {
     public static event Action OnLaunched = delegate { };
+    public static event Action OnCancel = delegate { };
     Rigidbody2D rb;
     Vector3 startPos;
     Vector3 endPos;
@@ -23,7 +24,8 @@ public class LaunchController : MonoBehaviour
     bool isMoving = false;
 
     TrailController trailController;
-    AudioSource audio;
+    [SerializeField] SFXObject aimingSound;
+    [SerializeField] SFXObject launchingSound;
 
     public Vector3 DragVector { get => dragVector; }
     public bool IsMoving { get => isMoving; }
@@ -31,7 +33,6 @@ public class LaunchController : MonoBehaviour
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
         trailController = GetComponent<TrailController>();
         rb = GetComponent<Rigidbody2D>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
@@ -55,6 +56,7 @@ public class LaunchController : MonoBehaviour
         {
             StartlaunchDrag();
         }
+        if(hasCancelled) return;
         if (Input.GetMouseButton(0) )
         {         
             endPos = PositionHelper.GetMousePosition();
@@ -62,7 +64,7 @@ public class LaunchController : MonoBehaviour
             
             DrawLine();
         }
-        if (Input.GetMouseButtonUp(0) && !hasCancelled)
+        if (Input.GetMouseButtonUp(0))
         {
             Launch();
         }
@@ -86,7 +88,7 @@ public class LaunchController : MonoBehaviour
 
     void StartlaunchDrag()
     {
-        audio.Play();
+        SFXManager.Main.Play(aimingSound);
         hasCancelled = false;
         startPos = PositionHelper.GetMousePosition();
         ToggleAimVisuals(true);
@@ -96,7 +98,9 @@ public class LaunchController : MonoBehaviour
     {
         startPos = Vector3.zero;
         endPos = Vector3.zero;
+        dragVector = Vector3.zero;
         ToggleAimVisuals(false);
+        OnCancel?.Invoke();
         hasCancelled = true;
     }
 
@@ -138,6 +142,7 @@ public class LaunchController : MonoBehaviour
 
     void Launch()
     {       
+        SFXManager.Main.Play(launchingSound);
         ToggleAimVisuals(false);
         Vector3 lauchForce = GetLaunchForce();
         rb.AddForce(lauchForce, ForceMode2D.Impulse);
@@ -154,6 +159,11 @@ public class LaunchController : MonoBehaviour
     public Vector3 GetLaunchForce()
     {
         return Vector3.ClampMagnitude(dragVector, maxLineLength) * powerMultiplier;
+    }
+
+    public float GetMaxForce()
+    {
+        return maxLineLength * powerMultiplier;
     }
 
     public int GetSpeedLevel()

@@ -16,8 +16,8 @@ MonoBehaviour:
   SpeedThreshold: 5
   TrailGradient:
     serializedVersion: 2
-    key0: {r: 0.854902, g: 0.92549026, b: 0, a: 0.7058824}
-    key1: {r: 1, g: 1, b: 1, a: 0.09803922}
+    key0: {r: 0.8488265, g: 0.8867924, b: 0.3890174, a: 0.7058824}
+    key1: {r: 0.85490197, g: 0.9254902, b: 0, a: 0.19607843}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}

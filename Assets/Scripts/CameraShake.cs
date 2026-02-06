@@ -6,20 +6,31 @@ public class CameraShake : MonoBehaviour
     [SerializeField] LaunchController launchController;
     [SerializeField] float shakeDuration = 0.5f;
     [SerializeField] float shakeMagnitude = 0.1f;
+    bool shakeEnabled = true;
 
     void Start()
     {
         LaunchController.OnLaunched += LaunchController_OnLaunched;
+        SettingsUIController.OnShakeChange += SettingsUIController_OnShakeChange;
     }
 
     private void OnDestroy()
     {
         LaunchController.OnLaunched -= LaunchController_OnLaunched;
+        SettingsUIController.OnShakeChange -= SettingsUIController_OnShakeChange;
     }
 
     private void LaunchController_OnLaunched()
     {
-        StartCoroutine(Shake(shakeDuration, shakeMagnitude));
+        if (shakeEnabled)
+        {
+            StartCoroutine(Shake(shakeDuration, shakeMagnitude));
+        }    
+    }
+
+    private void SettingsUIController_OnShakeChange(bool isEnabled)
+    {
+        shakeEnabled = isEnabled;
     }
 
     private IEnumerator Shake(float duration, float magnitude)

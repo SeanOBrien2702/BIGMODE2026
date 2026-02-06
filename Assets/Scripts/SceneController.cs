@@ -9,6 +9,8 @@ public class SceneController : MonoBehaviour
     public static event Action<string> OnStartLoadNextScene = delegate { };
     public static SceneController Instance;
     [SerializeField] TransitionAnimator animator;
+    [SerializeField] SFXObject transitionOutSFX;
+    [SerializeField] SFXObject transitionInSFX;
 
     bool isFirstTime = true;
 
@@ -53,7 +55,9 @@ public class SceneController : MonoBehaviour
 
     IEnumerator StartLoad(string sceneName)
     {
+        SFXManager.Main.Play(transitionOutSFX);
         yield return new WaitForSecondsRealtime(animator.profile.duration);
+        SFXManager.Main.Play(transitionInSFX);
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
     }
