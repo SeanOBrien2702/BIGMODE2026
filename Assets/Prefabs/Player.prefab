@@ -5476,8 +5476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sprite: {fileID: 2870774469358240382}
   animationSprites: []
-  scaleFactor: 0.03
-  resizeDuration: 0.5
+  scaleFactor: 0.01
 --- !u!58 &5048514962275156488
 CircleCollider2D:
   m_ObjectHideFlags: 0

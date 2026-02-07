@@ -175,4 +175,9 @@ public class LaunchController : MonoBehaviour
     {
         return SpeedDatabase.instance.GetDamageForSpeed(preCollisionVelocity.magnitude);
     }
+
+    public bool IsAiming()
+    {
+        return !hasCancelled && dragVector.magnitude > 0;
+    }
 }
