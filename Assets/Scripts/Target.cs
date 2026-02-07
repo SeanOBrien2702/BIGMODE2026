@@ -7,15 +7,18 @@ public class Target : MonoBehaviour
     [SerializeField] int health = 1;
     [SerializeField] bool canMove = true;
     [SerializeField] float stopVelocityThreshold = 0.3f;
-
+    DamageEffect damageEffect;
     Rigidbody2D rb;
+    int maxHealth;
 
     public int Health { get => health; }
     public bool CanMove { get => canMove; set => canMove = value; }
 
     void Start()
     {
+        maxHealth = health;
         rb = GetComponent<Rigidbody2D>();
+        damageEffect = GetComponent<DamageEffect>();
         if (!canMove)
         {
             rb.bodyType = RigidbodyType2D.Static;
@@ -46,6 +49,7 @@ public class Target : MonoBehaviour
     {
         health -= damage;
         OnTargetHit?.Invoke(health);
+        damageEffect.UpdateDamage((float)health / maxHealth);
         if (health <= 0)
         {
             Destroy(gameObject);
