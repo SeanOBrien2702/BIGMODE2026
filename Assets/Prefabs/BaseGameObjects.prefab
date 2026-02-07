@@ -126,6 +126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8386689866136935738}
     m_Modifications:
+    - target: {fileID: 3768414242721594706, guid: 8c1cb56198afb2f4eae57aee9d07bb26, type: 3}
+      propertyPath: orthographic size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5727199182466121047, guid: 8c1cb56198afb2f4eae57aee9d07bb26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00000023841858
@@ -363,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 1685497946533207337, guid: 136988206d66a854d81098137cb09d6d, type: 3}
       propertyPath: m_Name
       value: CinemachineCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961548459057004021, guid: 136988206d66a854d81098137cb09d6d, type: 3}
+      propertyPath: Lens.OrthographicSize
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1961548459057004021, guid: 136988206d66a854d81098137cb09d6d, type: 3}
       propertyPath: Target.TrackingTarget
