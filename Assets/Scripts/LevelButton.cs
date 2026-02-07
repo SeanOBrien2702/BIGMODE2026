@@ -11,6 +11,10 @@ public class LevelButton : MonoBehaviour
 
     internal void Initialize(int level)
     {
+        for (int i = 0; i < stars.Length; i++)
+        {
+            stars[i].SetActive(false);
+        }
         bool unlocked = LevelController.Instance.IsLevelUnlocked(level);
         button.interactable = unlocked;
         levelText.text = "Level " + (level + 1).ToString();
