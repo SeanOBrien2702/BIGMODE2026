@@ -2250,6 +2250,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseGameObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 8484597827079378866, guid: 449715cd41747db45924fd2dc628f894, type: 3}
+      propertyPath: 'starAmountPar.Array.data[0]'
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484597827079378866, guid: 449715cd41747db45924fd2dc628f894, type: 3}
+      propertyPath: 'starAmountPar.Array.data[1]'
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484597827079378866, guid: 449715cd41747db45924fd2dc628f894, type: 3}
+      propertyPath: 'starAmountPar.Array.data[2]'
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
