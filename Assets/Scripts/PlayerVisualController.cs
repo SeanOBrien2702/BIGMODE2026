@@ -6,7 +6,7 @@ public class PlayerVisualController : MonoBehaviour
 {
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] Sprite[] animationSprites;
-    [SerializeField, Range(0.001f, 0.06f)] float scaleFactor = 0.03f; 
+    float scaleFactor = 0.02f; 
     float resizeDuration = 0f;
     float magnitude;
     LaunchController launchController;
@@ -14,7 +14,7 @@ public class PlayerVisualController : MonoBehaviour
     float maxForce;
     float currentForce;
     Animator animator;
-    float sizeScale = 0.2f;
+    //float sizeScale = 0.2f;
 
     void Start()
     {
@@ -38,7 +38,7 @@ public class PlayerVisualController : MonoBehaviour
         {
             float angle = Mathf.Atan2(launchController.DragVector.y, launchController.DragVector.x) * Mathf.Rad2Deg;
             sprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
-            Vector3 scale = new Vector3(sizeScale, sizeScale + magnitude * scaleFactor, 1 - magnitude * scaleFactor);
+            Vector3 scale = new Vector3(1, 1 + magnitude * scaleFactor, 1 - magnitude * scaleFactor);
             sprite.transform.localScale = scale;
             currentForce = magnitude / maxForce;
         }
@@ -74,13 +74,13 @@ public class PlayerVisualController : MonoBehaviour
         float force = 0;
         while (time < duration)
         {
-            sprite.transform.localScale = Vector3.Lerp(startScale, Vector3.one * sizeScale, time / duration);
+            sprite.transform.localScale = Vector3.Lerp(startScale, Vector3.one, time / duration);
             force = Mathf.Lerp(currentForce, 0, time / duration);
             animator.SetFloat("Power", force);
             time += Time.deltaTime;
             yield return null;
         }
         animator.SetFloat("Power", 0);
-        sprite.transform.localScale = Vector3.one * sizeScale;
+        sprite.transform.localScale = Vector3.one;
     }
 }
