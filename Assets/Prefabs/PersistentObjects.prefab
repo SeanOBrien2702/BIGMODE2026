@@ -1044,6 +1044,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   mainMenuTrack: {fileID: 11400000, guid: 29d3738d91d6ce3498c70ef74ca7d5e7, type: 2}
+  levelTracks:
+  - {fileID: 11400000, guid: 16de5b5112e5f9341bd2ff0449ffa347, type: 2}
+  - {fileID: 11400000, guid: 7ec9c89ed146fc64bbd33adafd633bf3, type: 2}
   testTrack: {fileID: 11400000, guid: fdd944a19d4976f48b114b6f61e074a3, type: 2}
 --- !u!1 &2923439440615912456
 GameObject:

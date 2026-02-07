@@ -16,6 +16,14 @@ public class TargetController : MonoBehaviour
         Target.OnTargetHit -= Target_OnTargetHit;       
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            OnGameOver?.Invoke();
+        }
+    }
+
     private void Target_OnTargetHit(int hitsRemaining)
     {
         if(hitsRemaining > 0) return;        
