@@ -1047,7 +1047,6 @@ MonoBehaviour:
   levelTracks:
   - {fileID: 11400000, guid: 16de5b5112e5f9341bd2ff0449ffa347, type: 2}
   - {fileID: 11400000, guid: 7ec9c89ed146fc64bbd33adafd633bf3, type: 2}
-  testTrack: {fileID: 11400000, guid: fdd944a19d4976f48b114b6f61e074a3, type: 2}
 --- !u!1 &2923439440615912456
 GameObject:
   m_ObjectHideFlags: 0
