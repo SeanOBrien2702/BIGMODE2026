@@ -18,7 +18,7 @@ public class Target : MonoBehaviour
     {
         maxHealth = health;
         rb = GetComponent<Rigidbody2D>();
-        damageEffect = GetComponent<DamageEffect>();
+        damageEffect = GetComponentInChildren<DamageEffect>();
         if (!canMove)
         {
             rb.bodyType = RigidbodyType2D.Static;
