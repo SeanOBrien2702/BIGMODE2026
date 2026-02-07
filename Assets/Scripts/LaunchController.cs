@@ -52,7 +52,7 @@ public class LaunchController : MonoBehaviour
             CancelShot();
         }
         if (!CanShoot()) return;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             StartlaunchDrag();
         }
@@ -115,12 +115,12 @@ public class LaunchController : MonoBehaviour
     }
 
     public bool CanShoot()
-    {       
+    {
         return Time.timeScale == 1 &&
                rb.linearVelocity.magnitude == 0 &&
                !isGameOver &&
-               !isMoving &&
-               !EventSystem.current.IsPointerOverGameObject(); 
+               !isMoving;// &&
+               //!EventSystem.current.IsPointerOverGameObject(); 
     }
 
     void ToggleAimVisuals(bool toggle)
