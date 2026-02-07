@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 7dfc1aa9695151d42b5dddcf16ac1346
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7066547638424443679
+    second: seal_supermarket_fruits_0
+  - first:
+      213: 2224968737710053643
+    second: seal_supermarket_fruits_1
+  - first:
+      213: 3876975937276865355
+    second: seal_supermarket_fruits_2
+  - first:
+      213: 377815653280681706
+    second: seal_supermarket_fruits_3
+  - first:
+      213: -8484254203658198270
+    second: seal_supermarket_fruits_4
+  - first:
+      213: -8627932351879166813
+    second: seal_supermarket_fruits_5
+  - first:
+      213: -4357610338655722116
+    second: seal_supermarket_fruits_6
+  - first:
+      213: 5468008592338913524
+    second: seal_supermarket_fruits_7
+  - first:
+      213: -7486355872985704895
+    second: seal_supermarket_fruits_8
+  - first:
+      213: -1045685535701385658
+    second: seal_supermarket_fruits_9
+  - first:
+      213: 6433264117589275923
+    second: seal_supermarket_fruits_10
+  - first:
+      213: 7567875467320533725
+    second: seal_supermarket_fruits_11
+  - first:
+      213: -5429055695761285396
+    second: seal_supermarket_fruits_12
+  - first:
+      213: 1385452473196267807
+    second: seal_supermarket_fruits_13
+  - first:
+      213: 1114279202594327402
+    second: seal_supermarket_fruits_14
+  - first:
+      213: -1647319306628515754
+    second: seal_supermarket_fruits_15
+  - first:
+      213: -2900502918902241981
+    second: seal_supermarket_fruits_16
+  - first:
+      213: -9027112193650746551
+    second: seal_supermarket_fruits_17
+  - first:
+      213: -6139893557247319993
+    second: seal_supermarket_fruits_18
+  - first:
+      213: 8526947759847139339
+    second: seal_supermarket_fruits_19
+  - first:
+      213: 7721371488064215112
+    second: seal_supermarket_fruits_20
+  - first:
+      213: -365317192205377605
+    second: seal_supermarket_fruits_21
+  - first:
+      213: 819768744964080305
+    second: seal_supermarket_fruits_22
+  - first:
+      213: 584608155085986661
+    second: seal_supermarket_fruits_23
+  - first:
+      213: -2561980007981834308
+    second: seal_supermarket_fruits_24
+  - first:
+      213: -8535859289488558730
+    second: seal_supermarket_fruits_25
+  - first:
+      213: -5995578122051371629
+    second: seal_supermarket_fruits_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_0
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1461
+        width: 120
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4e55fec549eed90800000000000000
+      internalID: -7066547638424443679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_1
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1439
+        width: 114
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b099e8f474da0ee10800000000000000
+      internalID: 2224968737710053643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_2
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1417
+        width: 115
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bef18e219cdc530800000000000000
+      internalID: 3876975937276865355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_3
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1416
+        width: 100
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee806cb5554e3500800000000000000
+      internalID: 377815653280681706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_4
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1431
+        width: 104
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203a6d6d0cfd14a80800000000000000
+      internalID: -8484254203658198270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_5
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1436
+        width: 111
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4442c1d3d634880800000000000000
+      internalID: -8627932351879166813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1076
+        width: 227
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c752bde0c78a683c0800000000000000
+      internalID: -4357610338655722116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1097
+        width: 250
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8052f08d442eb40800000000000000
+      internalID: 5468008592338913524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_8
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1105
+        width: 209
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14617887ffe1b1890800000000000000
+      internalID: -7486355872985704895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_9
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 1066
+        width: 193
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e31c9ab8afc71f0800000000000000
+      internalID: -1045685535701385658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_10
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1047
+        width: 172
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315fc2b41ab874950800000000000000
+      internalID: 6433264117589275923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 771
+        width: 178
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2a80624ae760960800000000000000
+      internalID: 7567875467320533725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 797
+        width: 192
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee565ceb9e18a4b0800000000000000
+      internalID: -5429055695761285396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_13
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 797
+        width: 177
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19cc061fad1a3310800000000000000
+      internalID: 1385452473196267807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_14
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 805
+        width: 185
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b8d33f707b67f00800000000000000
+      internalID: 1114279202594327402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_15
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 793
+        width: 186
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658b3c881db8329e0800000000000000
+      internalID: -1647319306628515754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_16
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 501
+        width: 172
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34529d876f75fb7d0800000000000000
+      internalID: -2900502918902241981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_17
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 523
+        width: 134
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b99dd994149b280800000000000000
+      internalID: -9027112193650746551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_18
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 503
+        width: 148
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74060991757bacaa0800000000000000
+      internalID: -6139893557247319993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_19
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 532
+        width: 146
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0860045fcdc55670800000000000000
+      internalID: 8526947759847139339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_20
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 510
+        width: 163
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84895e47572d72b60800000000000000
+      internalID: 7721371488064215112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_21
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 501
+        width: 146
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf514003f12eeaf0800000000000000
+      internalID: -365317192205377605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_22
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 107
+        width: 198
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b24d898457606b00800000000000000
+      internalID: 819768744964080305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_23
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 78
+        width: 153
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b52b80502fc1800800000000000000
+      internalID: 584608155085986661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_24
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 115
+        width: 149
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf1796b1c4027cd0800000000000000
+      internalID: -2561980007981834308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_25
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 95
+        width: 182
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675f05d73398a8980800000000000000
+      internalID: -8535859289488558730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_supermarket_fruits_26
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 110
+        width: 177
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d3604c67d6bcca0800000000000000
+      internalID: -5995578122051371629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      seal_supermarket_fruits_0: -7066547638424443679
+      seal_supermarket_fruits_1: 2224968737710053643
+      seal_supermarket_fruits_10: 6433264117589275923
+      seal_supermarket_fruits_11: 7567875467320533725
+      seal_supermarket_fruits_12: -5429055695761285396
+      seal_supermarket_fruits_13: 1385452473196267807
+      seal_supermarket_fruits_14: 1114279202594327402
+      seal_supermarket_fruits_15: -1647319306628515754
+      seal_supermarket_fruits_16: -2900502918902241981
+      seal_supermarket_fruits_17: -9027112193650746551
+      seal_supermarket_fruits_18: -6139893557247319993
+      seal_supermarket_fruits_19: 8526947759847139339
+      seal_supermarket_fruits_2: 3876975937276865355
+      seal_supermarket_fruits_20: 7721371488064215112
+      seal_supermarket_fruits_21: -365317192205377605
+      seal_supermarket_fruits_22: 819768744964080305
+      seal_supermarket_fruits_23: 584608155085986661
+      seal_supermarket_fruits_24: -2561980007981834308
+      seal_supermarket_fruits_25: -8535859289488558730
+      seal_supermarket_fruits_26: -5995578122051371629
+      seal_supermarket_fruits_3: 377815653280681706
+      seal_supermarket_fruits_4: -8484254203658198270
+      seal_supermarket_fruits_5: -8627932351879166813
+      seal_supermarket_fruits_6: -4357610338655722116
+      seal_supermarket_fruits_7: 5468008592338913524
+      seal_supermarket_fruits_8: -7486355872985704895
+      seal_supermarket_fruits_9: -1045685535701385658
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

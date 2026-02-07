@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 6efd5faa47ebf554685f0d971b1399d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6323397137930118575
+    second: seal_museum_pottery_0
+  - first:
+      213: 5375757539719409527
+    second: seal_museum_pottery_1
+  - first:
+      213: -6557773742754544049
+    second: seal_museum_pottery_2
+  - first:
+      213: -4176904498559592132
+    second: seal_museum_pottery_3
+  - first:
+      213: -2940911371215632835
+    second: seal_museum_pottery_4
+  - first:
+      213: 2325604071881123861
+    second: seal_museum_pottery_5
+  - first:
+      213: 2774296993426594210
+    second: seal_museum_pottery_6
+  - first:
+      213: -1106057925890447048
+    second: seal_museum_pottery_7
+  - first:
+      213: -7704224031088602024
+    second: seal_museum_pottery_8
+  - first:
+      213: -3790588046777673513
+    second: seal_museum_pottery_9
+  - first:
+      213: -2578583710635366329
+    second: seal_museum_pottery_10
+  - first:
+      213: 1873725532291713846
+    second: seal_museum_pottery_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: seal_museum_pottery_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 762
+        width: 281
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a14fb4ec7ce38a0800000000000000
+      internalID: -6323397137930118575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_1
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 732
+        width: 287
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f6a9910078a9a40800000000000000
+      internalID: 5375757539719409527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_2
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 742
+        width: 305
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f464bb9868b1ef4a0800000000000000
+      internalID: -6557773742754544049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_3
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 762
+        width: 281
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39df9e1d77a806c0800000000000000
+      internalID: -4176904498559592132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_4
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 732
+        width: 287
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3609c280b8cf27d0800000000000000
+      internalID: -2940911371215632835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_5
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 742
+        width: 305
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5182da0f494364020800000000000000
+      internalID: 2325604071881123861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 79
+        width: 281
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a950aaaa68408620800000000000000
+      internalID: 2774296993426594210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_7
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 49
+        width: 287
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8396b423d2e76a0f0800000000000000
+      internalID: -1106057925890447048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_8
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 59
+        width: 305
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8549fecff09151590800000000000000
+      internalID: -7704224031088602024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_9
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 79
+        width: 281
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d899fd3140256bc0800000000000000
+      internalID: -3790588046777673513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_10
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 49
+        width: 287
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74868ffe6c7073cd0800000000000000
+      internalID: -2578583710635366329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seal_museum_pottery_11
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 59
+        width: 305
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bc3d6b17fc00a10800000000000000
+      internalID: 1873725532291713846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      seal_museum_pottery_0: -6323397137930118575
+      seal_museum_pottery_1: 5375757539719409527
+      seal_museum_pottery_10: -2578583710635366329
+      seal_museum_pottery_11: 1873725532291713846
+      seal_museum_pottery_2: -6557773742754544049
+      seal_museum_pottery_3: -4176904498559592132
+      seal_museum_pottery_4: -2940911371215632835
+      seal_museum_pottery_5: 2325604071881123861
+      seal_museum_pottery_6: 2774296993426594210
+      seal_museum_pottery_7: -1106057925890447048
+      seal_museum_pottery_8: -7704224031088602024
+      seal_museum_pottery_9: -3790588046777673513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
