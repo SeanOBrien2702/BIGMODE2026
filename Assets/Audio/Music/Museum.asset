@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Museum
   m_EditorClassIdentifier: 
   CollapseEditions: 0
-  Name: Song2
+  Name: Mus
   Intro: {fileID: 0}
   IntroVolume: 1
   OverlapDuration: 2
   Editions:
   - Name: Main
-    Soundtrack: {fileID: 8300000, guid: 08334e5cd7a1c324b9e6c9d696c8c64c, type: 3}
+    Soundtrack: {fileID: 8300000, guid: 2919c192b3b17cf4f9f2f1b455549b4a, type: 3}
     SoundtrackVolume: 1
     TransitionSound: {fileID: 0}
     TransitionVolume: 1

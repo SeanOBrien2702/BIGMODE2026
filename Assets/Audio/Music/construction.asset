@@ -19,7 +19,7 @@ MonoBehaviour:
   OverlapDuration: 2
   Editions:
   - Name: construction
-    Soundtrack: {fileID: 8300000, guid: 0dd42cf75a1116747aad26931c49f7cf, type: 3}
+    Soundtrack: {fileID: 8300000, guid: b6eab57dad8474642a4a62071e2345c6, type: 3}
     SoundtrackVolume: 1
     TransitionSound: {fileID: 0}
     TransitionVolume: 1

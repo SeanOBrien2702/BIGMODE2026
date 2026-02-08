@@ -5,7 +5,7 @@ public class AudioController : MonoBehaviour
     [Header("Music")]
     [SerializeField] Track mainMenuTrack;
     [SerializeField] Track[] levelTracks;
-    int currentTrack = -1;
+    int currentTrack = 0;
 
     void Start()
     {
@@ -27,9 +27,21 @@ public class AudioController : MonoBehaviour
         }
         else 
         {
-            if(level % 3 == 0)
+            if (level < 4)
             {
-                currentTrack++;
+                currentTrack = 0;
+            }
+            else if (level < 7)
+            {
+                currentTrack = 1;
+            }
+            else if (level < 10)
+            { 
+                currentTrack = 2;
+            }
+            else
+            {
+                currentTrack = 3;
             }
             MusicManager.Main.Play(levelTracks[currentTrack], 1, 1);
         }
