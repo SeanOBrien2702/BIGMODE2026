@@ -1370,19 +1370,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 2.9924445, y: 2.121304}
-  - {x: 12.007555, y: 1.9982505}
-  - {x: 11.97321, y: -1.7161803}
-  - {x: 37.892258, y: -1.7330561}
-  - {x: 37.87775, y: 1.9907236}
-  - {x: 47.027058, y: 1.8886018}
-  - {x: 47.10155, y: -11.040579}
-  - {x: 37.965977, y: -11.071847}
-  - {x: 37.9356, y: -7.807896}
-  - {x: 12.020528, y: -7.7443314}
-  - {x: 12.038456, y: -11.071144}
-  - {x: 2.9091988, y: -11.045324}
-  - {x: 2.9490047, y: 1.980165}
+  - {x: -8.915966, y: 5.0516458}
+  - {x: 23.978315, y: 4.8662453}
+  - {x: 23.881622, y: -14.310417}
+  - {x: -9.180256, y: -14.389641}
+  - {x: -8.94537, y: 5.0705376}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1460,15 +1452,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484597827079378866, guid: 449715cd41747db45924fd2dc628f894, type: 3}
       propertyPath: 'starAmountPar.Array.data[0]'
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8484597827079378866, guid: 449715cd41747db45924fd2dc628f894, type: 3}
       propertyPath: 'starAmountPar.Array.data[1]'
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8484597827079378866, guid: 449715cd41747db45924fd2dc628f894, type: 3}
       propertyPath: 'starAmountPar.Array.data[2]'
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
